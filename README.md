@@ -4,7 +4,7 @@
 [![License](https://poser.pugx.org/dotzero/yii2-amocrm/license)](https://packagist.org/packages/dotzero/yii2-amocrm)
 
 Расширение для Yii Framework 2 реализующее клиент для работы с API amoCRM
-используя библиотеку [amocrm-php](https://github.com/dotzero/amocrm-php).
+используя библиотеку для работы с API [amocrm-php](https://github.com/dotzero/amocrm-php).
 
 ## Требования:
 
@@ -22,10 +22,6 @@ $ composer require dotzero/yii2-amocrm
 -  Добавить `amocrm` в секцию `components` конфигурационного файла:
 
 ```php
-'aliases' => array(
-    ...
-    'vendor' => realpath(__DIR__ . '/../../vendor'),
-),
 'components' => [
     ...
     'amocrm' => [
