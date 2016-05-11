@@ -1,6 +1,6 @@
 {
     "name": "dotzero/yii2-amocrm",
-    "description": "Расширения для Yii Framework 2 реализующее клиент для работы с API amoCRM",
+    "description": "Расширение для Yii Framework 2 реализующее клиент для работы с API amoCRM",
     "license": "MIT",
     "keywords": ["yii2", "extension", "amocrm", "crm", "api"],
     "type": "yii2-extension",
