@@ -2,7 +2,6 @@
 
 namespace yii\amocrm;
 
-use Yii;
 use yii\base\Object;
 use yii\base\InvalidConfigException;
 
@@ -10,11 +9,28 @@ use yii\base\InvalidConfigException;
  * Client class file.
  *
  * @package yii\amocrm
- * @version 0.1.0
  * @author dotzero <mail@dotzero.ru>
  * @link http://www.dotzero.ru/
  * @link https://github.com/dotzero/yii2-amocrm
  * @link https://developers.amocrm.ru/rest_api/
+ * @property \AmoCRM\Models\Account $account
+ * @property \AmoCRM\Models\Call $call
+ * @property \AmoCRM\Models\Catalog $catalog
+ * @property \AmoCRM\Models\CatalogElement $catalog_element
+ * @property \AmoCRM\Models\Company $company
+ * @property \AmoCRM\Models\Contact $contact
+ * @property \AmoCRM\Models\Customer $customer
+ * @property \AmoCRM\Models\CustomersPeriods $customers_periods
+ * @property \AmoCRM\Models\CustomField $custom_field
+ * @property \AmoCRM\Models\Lead $lead
+ * @property \AmoCRM\Models\Links $links
+ * @property \AmoCRM\Models\Note $note
+ * @property \AmoCRM\Models\Pipelines $pipelines
+ * @property \AmoCRM\Models\Task $task
+ * @property \AmoCRM\Models\Transaction $transaction
+ * @property \AmoCRM\Models\Unsorted $unsorted
+ * @property \AmoCRM\Models\WebHooks $webhooks
+ * @property \AmoCRM\Models\Widgets $widgets
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -107,5 +123,16 @@ class Client extends Object
         }
 
         return $this->client;
+    }
+
+    /**
+     * Динамеческое получение моделей из \AmoCRM\Client
+     *
+     * @param string $property
+     * @return \AmoCRM\Models\ModelInterface
+     */
+    public function __get($property)
+    {
+        return call_user_func_array([$this->getClient(), '__get'], [$property]);
     }
 }
