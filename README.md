@@ -43,10 +43,12 @@ $ composer require dotzero/yii2-amocrm
 
 ```php
 try {
-    $amo = Yii::$app->amocrm->getClient();
-
     // Получение экземпляра модели для работы с аккаунтом
+    $amo = Yii::$app->amocrm->getClient();
     $account = $amo->account;
+
+    // или прямо
+    $account = Yii::$app->amocrm->account;
 
     // Вывод информации об аккаунте
     print_r($account->apiCurrent());
