@@ -50,7 +50,7 @@ class ClientTest extends TestCase
             ['task', 'AmoCRM\Models\Task'],
             ['transaction', 'AmoCRM\Models\Transaction'],
             ['unsorted', 'AmoCRM\Models\Unsorted'],
-            ['webhooks', 'AmoCRM\Models\WebHooks'],
+            ['webhooks', 'AmoCRM\Models\Webhooks'],
             ['widgets', 'AmoCRM\Models\Widgets'],
         ];
     }
