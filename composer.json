@@ -12,8 +12,11 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "dotzero/amocrm": "0.3.*",
+        "dotzero/amocrm": "*",
         "yiisoft/yii2": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
     },
     "autoload": {
         "psr-4": {

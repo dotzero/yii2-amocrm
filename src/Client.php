@@ -34,9 +34,7 @@ use yii\base\InvalidConfigException;
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- */
-
-/**
+ *
  * Расширения для Yii Framework 2 реализующее клиент
  * для работы с API amoCRM используя библиотеку amocrm-php
  *
