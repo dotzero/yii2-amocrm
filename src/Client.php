@@ -2,7 +2,7 @@
 
 namespace yii\amocrm;
 
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\base\InvalidConfigException;
 
 /**
@@ -62,7 +62,7 @@ use yii\base\InvalidConfigException;
  *     ],
  * ],
  */
-class Client extends Object
+class Client extends BaseObject
 {
     /**
      * @var null|string Персональный поддомен на сайте amoCRM
